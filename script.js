@@ -13,9 +13,22 @@ const quotes = [
     "Keep that chin up! You're in for a lucky break!",
     "Whatever happens, it's all part of your success story!"
 ];
-function displayNewQuote() {
-    const randomNum = Math.floor(Math.random() * quotes.length);
-    quoteElement.innerHTML = quotes[randomNum];
+let i = 0;
+let currentQuote="";
+function typeWriter(){
+    if (i< currentQuote.length){
+        quoteElement.innerHTML += currentQuote.charAt(i);
+        i++;
+        setTimeout(typeWriter,40)
+    }
+}
+function displayNewQuote(){
+    i=0;
+    quoteElement.innerHTML="";
+    const randomNum = Math.floor(Math.random()*quotes.length);
+    currentQuote= quotes[randomNum];
+    currentQuote = currentQuote.replace(/<[^>]*/g,'');
+    typeWriter();
 }
 function updateSong() {
     audio.src = `${currentSongNum}.mp3`;
