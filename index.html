@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Ya!</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="WebsiteHeader">Hey, Ya!</h1>
+        
+        <div class="image-wrapper">
+            <img src="icon.jpg" alt="Hey Ya!" class="stand-image">
+        </div>
+
+        <div class="quote-box">
+            <p class="WebsiteParagraph" id="quote"></p>
+        </div>
+
+        <div class="buttonContainer">
+            <button class="buttonGenerate" onclick="reload()">Reload Quote</button>
+            <button class="buttonPlay" onclick="prevSong()">Prev Song</button>
+            <button class="buttonPlay" onclick="nextSong()">Next Song</button>
+        </div>
+    </div>
+    <audio id="audioPlayer"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
